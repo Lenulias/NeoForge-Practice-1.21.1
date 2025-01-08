@@ -1,5 +1,11 @@
 {
   "item.tutorialmod.bismuth": "Bismuth",
   "item.tutorialmod.raw_bismuth": "Raw Bismuth",
-  "item.tutorialmod.ref_bismuth": "Refined Bismuth"
+  "item.tutorialmod.ref_bismuth": "Refined Bismuth",
+
+  "block.tutorialmod.bismuth_block": "The Creature",
+  "block.tutorialmod.bismuth_ore": "The Modded Minecraft Experience",
+
+  "creativetab.tutorialmod.bismuth_items": "Gunga Ginga",
+  "creativetab.tutorialmod.bismuth_blocks": "Bepis"
 }

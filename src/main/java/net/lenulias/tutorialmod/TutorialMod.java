@@ -1,5 +1,7 @@
 package net.lenulias.tutorialmod;
 
+import net.lenulias.tutorialmod.block.ModBlocks;
+import net.lenulias.tutorialmod.item.ModCreativeModeTabs;
 import net.lenulias.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -52,7 +54,10 @@ public class TutorialMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -70,6 +75,11 @@ public class TutorialMod {
             event.accept((ModItems.BISMUTH));
             event.accept((ModItems.RAW_BISMUTH));
             event.accept((ModItems.REF_BISMUTH));
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_ORE);
         }
     }
 
